@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--由於安卓說android:parentActivityName只支援Api 21 以上的環境，所以只好設定targetApi來限定此屬性只套用到21的環境。使用 tools:targetApi 属性可以忽视版本的警告-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.android.miwok"
+    tools:targetApi="21">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NumbersActivity"
+            android:label= "@string/category_numbers"
+            android:parentActivityName=".MainActivity"/>   <!--To add "Up button", the first step is to declare which activity is the appropriate parent for each activity. Doing so allows the system to facilitate navigation patterns such as Up because the system can determine the logical parent activity from the manifest file. The same goes for the remaining sub-activities below-->
+        <!--(Optional) 可在這裡加上這兩行以支援安卓4.0以下的手機<meta-data android:name="android.support.PARENT_ACTIVITY"
+                                           下面四個子頁面也是如此           android:value=".MainActivity" />               -->
+        <activity android:name=".PhrasesActivity"
+            android:label="@string/category_phrases"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".FamilyActivity"
+            android:label="@string/category_family"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ColorsActivity"
+            android:label="@string/category_colors"
+            android:parentActivityName=".MainActivity"> </activity>
+    </application>
+
+</manifest>

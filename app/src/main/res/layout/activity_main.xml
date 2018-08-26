@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.miwok.MainActivity">
+
+
+    <!-- FrameLayout is simply a ViewGroup that typically contains 1 child view.
+    Using FrameLayout, we can keep the colored background per category view, as well as have touch feedback.-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_numbers">
+
+        <!-- Use "selectableItemBackground" attribute to create and confine the ripple effect (a.k.a. Touch Feedback) within the view it resides in.-->
+        <TextView
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_numbers"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_family">
+
+        <!-- Use "selectableItemBackground" attribute to create and confine the ripple effect (a.k.a. Touch Feedback) within the view it resides in.-->
+        <TextView
+            android:id="@+id/family"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:text="@string/category_family"
+            tools:targetApi="21"/>
+            <!--由於安卓說selectableItemBackgroundBorderless屬性只支援Api 21 以上的環境，所以只好設定targetApi來限定此屬性只套用到21的環境。使用 tools:targetApi 属性可以忽视版本的警告-->
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
+
+        <TextView
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:background="@drawable/custom_ripple_borderless"
+            android:text="@string/category_colors" />
+            <!-- 要使用自定義的ripple effect就必須在drawable資料夾下創建XML Layout並填入ripple標籤，然後在這裡導入(套用)該XML的名稱至android:background
+            等於是叫安卓去drawable資料夾抓自定義的ripple effect 版型-->
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_phrases">
+
+        <TextView
+            android:id="@+id/phrases"
+            style="@style/CategoryStyle"
+            android:background="@drawable/custom_ripple_border"
+            android:text="@string/category_phrases" />
+            <!-- 要使用自定義的ripple effect就必須在drawable資料夾下創建XML Layout並填入ripple標籤，然後在這裡導入(套用)該XML的名稱至android:background
+            等於是叫安卓去drawable資料夾抓自定義的ripple effect 版型-->
+    </FrameLayout>
+
+
+</LinearLayout>
