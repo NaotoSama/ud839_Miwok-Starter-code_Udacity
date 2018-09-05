@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--這個佈局的目的是自定義想要呈現的畫面排版-->
+
 <!--xmlns:tools="http://schemas.android.com/tools" means
 any code line below that starts with the prefix "tools" is part of the tools namespace
 tools可以告訴Android Studio，哪些屬性在運行的時候是被忽略的，只在設計佈局的時候有效。

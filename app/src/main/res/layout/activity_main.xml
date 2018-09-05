@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 這個佈局的目的是配置4個主題View。先用FrameLayout把各個主題View打包起來，讓View可保有自己的屬性和視覺特效-->
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"

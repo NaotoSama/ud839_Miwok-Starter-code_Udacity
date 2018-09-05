@@ -12,6 +12,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * 這個Class目的是要設置ArrayList，並呼叫WordAdapter Class中的Adapter(調度器)，
+ * 然後把Adapter(調度器)設置到(對接到)客製化的ListView(也就是word_list_view.xml布局)，在ListView上顯示ArrayList。
+ * 另外，還透過mediaPlayer和AudioManager在ArrayList上設置音訊檔
+ */
+
+
 public class ColorsActivity extends AppCompatActivity {
 
     /**

@@ -21,6 +21,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * 這個Class目的是要透過setOnClickListener在各個View上設置對接功能，讓用戶可從MainActivity跳轉到各主題View的畫面。
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
